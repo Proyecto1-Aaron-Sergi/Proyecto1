@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TomasDomingo Bicicletas</title>
+	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	<meta charset="utf-8">
+</head>
+<body>
+	<div>
+	<form class="pure-form pure-form-aligned">
+	    <fieldset>
+			<div class="pure-control-group">
+				<label>Fecha del robo</label>
+				<input type="date" name="fecha">
+			</div>
+
+	    	<div class="pure-control-group">
+	    		<label>Ubicación</label>
+		        <select id="ubicacion">
+		            <option>Barcelona</option>
+		            <option>Tarragona</option>
+		            <option>Lleida</option>
+		            <option>Girona</option>
+	        	</select>
+        	</div>
+	    	
+	    	<div class="pure-control-group">
+				<label>Descripción de la bicicleta</label>
+				<textarea name="descripcion" maxlength="100" placeholder="Introduce el color y los detalles de la bici."></textarea>
+			</div>
+
+			<div class="pure-control-group">
+	            <label>Marca</label>
+	            <input id="marca" type="text" placeholder="Introduce la marca.">
+        	</div>
+
+        	<div class="pure-control-group">
+	            <label>Modelo</label>
+	            <input id="modelo" type="text" placeholder="Introduce el modelo.">
+        	</div>
+
+	        <div class="pure-controls">
+	            <label class="pure-checkbox">
+	                <input id="cb" type="checkbox"> Confirmo que los datos son correctos
+	            </label>
+
+	            <button type="submit" class="pure-button pure-button-primary">Enviar</button>
+	        </div>
+	    </fieldset>
+
+	</form>
+	</div>
+</body>
+</html>
