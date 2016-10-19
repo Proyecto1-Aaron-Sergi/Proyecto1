@@ -41,7 +41,6 @@ $conexion = mysqli_connect('localhost', 'root', '', 'bd_proyecto1');
 		}
 	}
 
-
 		mysqli_close($conexion);
 ?>
 </body>
