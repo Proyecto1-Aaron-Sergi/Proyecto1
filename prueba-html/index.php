@@ -5,6 +5,12 @@
 </head>
 <body>
 <?php
+$fecha=$_REQUEST["fecha"];
+$ubicacion=$_REQUEST["celdas"];
+$color=$_REQUEST["color"];
+$marca=$_REQUEST["marca"];
+$modelo=$_REQUEST["modelo"];
+$numserie=$_REQUEST["numserie"];
 $conexion = mysqli_connect('localhost', 'root', '', 'bd_proyecto1');
 
 		$acentos = mysqli_query($conexion, "SET NAMES 'utf8'");
@@ -18,10 +24,17 @@ $conexion = mysqli_connect('localhost', 'root', '', 'bd_proyecto1');
 
 		extract($_REQUEST);
 
+if($numserie!="" || $numserie= anu_numero_serie){
+			$sql .= " WHERE anu_numero_serie=$numserie ";
+		} elseif ($marca=anu_marca) {
+			$sql .= " WHERE anu_marca=$marca";
+
+
 	$sql = "SELECT * FROM anunci";
+
+
 	
-
-
+	
 	$anuncis = mysqli_query($conexion, $sql);
 		if(mysqli_num_rows($anuncis)>0){
 			echo "Número de anuncios: " . mysqli_num_rows($anuncis) . "<br/><br/>";
@@ -36,10 +49,11 @@ $conexion = mysqli_connect('localhost', 'root', '', 'bd_proyecto1');
 				echo "Antigüedad: " . $anunci['anu_antiguitat'] . "<br/>";
 				echo "Descripción: " . $anunci['anu_descripcio'] . "<br/>";
 				echo "Número serie: " . $anunci['anu_numero_serie'] . "<br/>";
-				echo "Compensación: " . $anunci['anu_compensacio'] . "<br/>";
+				echo "Compensación: " . $anunci['anu_compensacio'] . "<br/><br/><br/><br/>";
 		
 		}
 	}
+
 
 		mysqli_close($conexion);
 ?>
