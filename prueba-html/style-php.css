@@ -18,7 +18,7 @@ body {
 menu {
 	font-size: 16px;
 	letter-spacing: 1.1px;
-	font-weight: bold;
+	font-weight: normal;
     float: left;
     font-weight: 200;
     margin-top: 5px;
@@ -59,6 +59,12 @@ a.ofertas {
 	padding-top: 10px;
 	padding-right: 220px;
 	display: block;
+}
+
+.buscar {
+	float: right;
+	padding-top: 10px;
+	padding-right: 0px;
 }
 
 a {
@@ -102,7 +108,7 @@ a {
 }
 
 .main-left {
-	float: center;
+	float: left;
 	text-align: left;
 	max-width: 500px;
 	min-width: 400px;
